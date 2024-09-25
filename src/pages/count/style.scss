@@ -1,1 +1,50 @@
 @import "../../scss/style";
+
+.session-time {
+   min-height: 100svh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 0.9375rem;
+   text-align: center;
+   // .session-time__title
+   &__title {
+      font-weight: 700;
+      font-size: 3rem;
+      &:not(:last-child) {
+         margin-bottom: 0.625rem;
+      }
+      @media (max-width: 768px) {
+         font-size: 2.3rem;
+      }
+      @media (max-width: 640px) {
+         font-size: 2rem;
+      }
+      @media (max-width: 555px) {
+         font-size: 1.5rem;
+      }
+      @media (max-width: 450px) {
+         font-size: 1.2rem;
+      }
+   }
+   // .session-time__text
+   &__text {
+      font-size: 3.5rem;
+      @media (max-width: 768px) {
+         font-size: 2.8rem;
+      }
+      @media (max-width: 640px) {
+         font-size: 2.5rem;
+      }
+      @media (max-width: 555px) {
+         font-size: 2rem;
+      }
+      @media (max-width: 450px) {
+         font-size: 1.5rem;
+      }
+      @media (max-width: 346px) {
+         font-size: 1.3rem;
+      }
+   }
+}
