@@ -35,11 +35,11 @@ get(sessionRef)
       const sessionTime = snapshot.val(); // 00:00:10
       console.log(sessionTime);
 
-      const sessionTimeElement = document.querySelector(".session-time");
+      const sessionTimeElement = document.querySelector(".session-time__text");
       let hours = sessionTime.slice(0, 2); // 00
       let minutes = sessionTime.slice(3, 5); // 00
       let seconds = sessionTime.slice(6);
-      sessionTimeElement.innerText = `${hours} часов ${minutes} минут ${seconds} секунд`;
+      sessionTimeElement.innerHTML = `<span>${hours} часов</span> <span>${minutes} минут</span> <span>${seconds} секунд</span>`;
     } else {
       console.log("No data available");
     }
