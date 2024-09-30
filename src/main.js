@@ -35,3 +35,20 @@ $(function() {
   $(".forgot").toggleClass("forgot-fade");
 	});
 });
+
+
+  $(function() {
+    $(".btn-signin").click(function(event) {
+      event.preventDefault(); // предотвращает стандартное поведение ссылки
+      let username = $("input[name='username']").val();
+      let password = $("input[name='password']").val();
+      
+      // Проверка логина и пароля
+      if (username === 'school10' && password === '123456789') {
+        // Перенаправление на страницу при успешной проверке
+        window.location.href = './src/pages/count/';
+      } else {
+        alert('Неверный логин или пароль!'); // сообщение об ошибке
+      }
+    });
+  });
